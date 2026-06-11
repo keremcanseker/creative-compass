@@ -74,7 +74,7 @@ function HeroVisual() {
         <div className="mt-6 grid grid-cols-3 gap-3 border-t border-white/10 pt-5 text-center">
           {[
             ["3.1×", "pipeline"],
-            ["↓42%", "CAC"],
+            ["↓31%", "CAC"],
             ["$180M+", "ad spend"],
           ].map(([v, l]) => (
             <div key={l}>

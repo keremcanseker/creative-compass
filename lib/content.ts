@@ -1,7 +1,6 @@
 /**
  * Creative Compass — site content.
  * Single source of truth for all copy. Edit here to change the site text.
- * Content merged & trimmed from the source PDF + the Lovable draft.
  */
 
 export const brand = {
@@ -27,16 +26,16 @@ export const hero = {
   titleTop: "We build, market, and",
   titleAccent: "scale businesses.",
   subtitle:
-    "Creative Compass is a full-service growth agency — paid media, SEO, creative, technology, automation, and analytics — powered by an in-house engineering team that builds what most agencies can’t.",
-  primary: { label: "Get a Free Growth Plan", href: "#contact" },
-  secondary: { label: "Our Services", href: "#services" },
-  rating: "Rated by the brands we’ve scaled",
-  proof: "Trusted by 120+ growing brands",
+    "One team that runs your paid media and writes the code behind it. Most agencies hand you a campaign and a login. We hand you a growth engine, with engineers on staff to build the parts off-the-shelf tools can’t.",
+  primary: { label: "Get a Free Growth Audit", href: "#contact" },
+  secondary: { label: "See What We Do", href: "#services" },
+  rating: "Rated by the brands we’ve grown",
+  proof: "Trusted by 100+ growing brands",
   stats: [
-    { value: "+312%", label: "avg. ROAS lift" },
-    { value: "42%", label: "lower blended CAC", prefix: "↓" },
+    { value: "+312%", label: "best-case ROAS lift" },
+    { value: "31%", label: "blended CAC", prefix: "↓" },
     { value: "3.1×", label: "pipeline growth" },
-    { value: "$180M+", label: "managed ad spend" },
+    { value: "$180M+", label: "ad spend managed" },
   ],
 };
 
@@ -65,16 +64,16 @@ export type Service = {
 
 export const services = {
   eyebrow: "What we do",
-  title: "Full-service growth, engineered to scale.",
+  title: "Everything your growth needs, under one roof.",
   subtitle:
-    "Six capabilities under one team — so strategy, execution, and the software behind it all compound instead of fighting each other.",
+    "Six things most brands stitch together from five vendors. We run all of them with one team, so your strategy, creative, and the software underneath move in the same direction.",
   list: [
     {
       id: "01",
       icon: "TrendingUp",
       title: "Growth Marketing",
       blurb:
-        "Full-funnel paid acquisition across every channel that moves pipeline and revenue.",
+        "Full-funnel paid acquisition across every channel that actually moves pipeline and revenue.",
       items: [
         "Google Ads",
         "Meta (Facebook & Instagram)",
@@ -90,7 +89,7 @@ export const services = {
       icon: "Search",
       title: "SEO & Organic Growth",
       blurb:
-        "Compounding organic visibility through technical, programmatic, and content SEO.",
+        "Organic traffic that keeps paying off long after you stop touching it. Technical, programmatic, and content SEO.",
       items: [
         "Technical SEO",
         "Programmatic SEO",
@@ -106,7 +105,7 @@ export const services = {
       icon: "PenTool",
       title: "Creative Services",
       blurb:
-        "Performance-grade creative that converts — ad creative, landing pages, and brand systems.",
+        "Ad creative, landing pages, and brand systems built to convert, not just to look good in a portfolio.",
       items: [
         "Website & landing page design",
         "Ad creative & UGC",
@@ -121,7 +120,7 @@ export const services = {
       icon: "Code2",
       title: "Technology Development",
       blurb:
-        "We build the systems and products that power growth — in-house, not outsourced.",
+        "The websites, apps, and internal tools your growth runs on, built by our own engineers instead of a freelancer marketplace.",
       items: [
         "Website development",
         "Ecommerce builds",
@@ -136,7 +135,7 @@ export const services = {
       icon: "Workflow",
       title: "Automation & AI",
       blurb:
-        "Reduce manual work and scale operations with automation and AI agents wired to your stack.",
+        "Cut the manual busywork and run more of your operation on autopilot, with automations and AI agents wired to your stack.",
       items: [
         "CRM automation",
         "Marketing automation",
@@ -151,7 +150,7 @@ export const services = {
       icon: "BarChart3",
       title: "Analytics & Optimization",
       blurb:
-        "Turn data into decisions with attribution, dashboards, and a relentless testing cadence.",
+        "Attribution, dashboards, and a weekly testing cadence so you always know what’s working and what to cut.",
       items: [
         "GA4 & server-side tracking",
         "Customer journey mapping",
@@ -168,36 +167,36 @@ export const why = {
   eyebrow: "Why Creative Compass",
   title: "A growth agency with engineers on staff.",
   subtitle:
-    "Most agencies focus on one area and stop at the campaign. We bring strategy, marketing, creative, technology, automation, and analytics under one team.",
+    "Most agencies are great at one thing and stop the moment a campaign needs custom code. We don’t. When the work calls for software, we build it instead of telling you it’s out of scope.",
   cards: [
     {
       icon: "Cpu",
       title: "Engineers on staff",
-      body: "When your funnel needs a custom landing-page system, a CRM automation, a portal, or an AI agent — our in-house engineers build it. The software most agencies can’t.",
+      body: "Need a custom landing-page system, a CRM automation, a customer portal, or an AI agent? Our engineers build it in-house. That’s the work most agencies quietly outsource or pass on.",
     },
     {
       icon: "Layers",
       title: "One execution partner",
-      body: "Strategy, marketing, creative, technology, automation, and analytics in one team. Faster execution, tighter alignment, no vendor ping-pong.",
+      body: "Strategy, creative, media, and engineering sit on the same team. Decisions land faster, nothing gets lost in a handoff, and there’s no vendor ping-pong.",
     },
     {
       icon: "LineChart",
-      title: "Measurable growth",
-      body: "Every dollar is accounted for. Server-side attribution, live dashboards, and weekly tests make growth provable — not promised.",
+      title: "Growth you can audit",
+      body: "Every dollar is accounted for. Server-side attribution, live dashboards, and weekly tests mean you can check our math any day of the week.",
     },
   ],
 };
 
 export const process = {
   eyebrow: "How we work",
-  title: "Live in 30 days. Compounding for years.",
+  title: "Live in 30 days. Better every month after.",
   subtitle:
-    "No three-month onboarding. We move fast, prove lift early, then layer on the work that compounds.",
+    "No three-month onboarding deck. We move fast, prove lift early, then keep stacking wins that hold.",
   steps: [
     {
       n: "01",
       title: "Audit & Plan",
-      body: "We tear down your funnel, channels, and CAC math. You get a written growth plan in week one — free.",
+      body: "We tear down your funnel, channels, and CAC math. You get a written growth audit in 48 hours, free.",
     },
     {
       n: "02",
@@ -206,13 +205,13 @@ export const process = {
     },
     {
       n: "03",
-      title: "Test & Scale",
-      body: "Weekly creative tests, channel expansion, and CRO. Every test reported with clear, attributable lift.",
+      title: "Test & Grow",
+      body: "Weekly creative tests, new channels, and CRO. Every test comes back with clear, attributable lift.",
     },
     {
       n: "04",
-      title: "Compound",
-      body: "Lifecycle, automation, and custom builds layer on. Your CAC drops while LTV climbs — month over month.",
+      title: "Build & Layer",
+      body: "Lifecycle, automation, and custom software layer on top. CAC keeps falling, LTV keeps climbing, and the gains stick.",
     },
   ],
 };
@@ -250,16 +249,16 @@ export const industries = {
 
 export const stats = {
   items: [
-    { value: "$180M+", label: "media managed" },
-    { value: "+312%", label: "avg. ROAS lift" },
-    { value: "120+", label: "brands scaled" },
+    { value: "$1.2B+", label: "revenue influenced" },
+    { value: "100+", label: "brands partnered" },
+    { value: "2.3 yrs", label: "avg. partnership" },
     { value: "100%", label: "in-house team" },
   ],
 };
 
 export const pricing = {
   eyebrow: "Engagements",
-  title: "Built for brands ready to scale.",
+  title: "Built for brands ready to grow.",
   subtitle:
     "Most clients start on a monthly growth retainer. Sprints and enterprise programs available on request.",
   plans: [
@@ -270,7 +269,7 @@ export const pricing = {
       featured: true,
       tag: "Most common",
       blurb:
-        "Ongoing paid media, SEO, creative, and analytics. The default for scaling brands.",
+        "Ongoing paid media, SEO, creative, and analytics. Where most of our partnerships start.",
       features: [
         "Embedded pod: strategist + media + creative",
         "Weekly creative & test cadence",
@@ -313,9 +312,9 @@ export const pricing = {
 
 export const contact = {
   eyebrow: "Get started",
-  title: "Ready to scale? Let’s build the plan.",
+  title: "Tell us where you’re stuck. We’ll show you the way out.",
   subtitle:
-    "Tell us about your brand, your funnel, and where you’re stuck. We’ll come back with a free growth plan in 48 hours.",
+    "Send us your brand, your funnel, and the number that’s keeping you up. We’ll come back with a free growth audit in 48 hours.",
   primary: { label: "Email us", href: "mailto:hello@creativecompass.com" },
   secondary: { label: "Book a free growth audit", href: "#contact" },
 };

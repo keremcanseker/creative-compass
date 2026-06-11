@@ -16,9 +16,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Creative Compass — We Build, Market, and Scale Businesses",
+  title: "Creative Compass — Growth marketing and the software behind it",
   description:
-    "Creative Compass is a full-service growth and digital transformation agency. Paid media, SEO, creative, technology, automation, and analytics — powered by an in-house engineering team.",
+    "One team that runs your paid media, SEO, and creative, with engineers on staff to build the landing-page systems, automations, and tools most agencies outsource.",
 };
 
 // Runs before paint to set the theme class — prevents a flash of the wrong theme.
