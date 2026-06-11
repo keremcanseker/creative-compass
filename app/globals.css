@@ -1,26 +1,273 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ----------------------------------------------------------------------------
+   Creative Compass — design tokens (cream + brand red + near-black, from logo)
+---------------------------------------------------------------------------- */
+@theme {
+  --color-cream: #f6f4ed;
+  --color-cream-2: #ecebe4;
+  --color-paper: #ffffff;
+  --color-ink: #18171c;
+  --color-ink-soft: #5c5b63;
+
+  /* dark panels (logo black) */
+  --color-night: #17161b;
+  --color-night-2: #0e0d11;
+
+  /* brand red (from the logo) */
+  --color-red: #e22a40;        /* vivid — buttons, icons, checks, accents */
+  --color-red-700: #c31f33;    /* hover + small label text (readable on cream) */
+  --color-red-bright: #fe3449; /* logo bright — accents on the dark panels */
+  --color-rose: #fbe3e6;       /* pale accent on light backgrounds */
+
+  --color-line: #e5e1d6;
+
+  --font-serif: var(--font-crimson), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 20px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(120% 60% at 50% -10%, #fbfaf4 0%, rgba(251, 250, 244, 0) 55%),
+    var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ----------------------------------------------------------------------------
+   Layered "smooth" shadows (Framer-style: many soft stops) + easing
+   Plain CSS classes so they always render (independent of Tailwind utilities).
+---------------------------------------------------------------------------- */
+:root {
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.shadow-soft {
+  box-shadow:
+    0 0.7px 0.7px -0.7px rgba(20, 18, 24, 0.06),
+    0 1.8px 1.8px -1.3px rgba(20, 18, 24, 0.055),
+    0 3.6px 3.6px -2px rgba(20, 18, 24, 0.05),
+    0 6.9px 6.9px -2.7px rgba(20, 18, 24, 0.04),
+    0 13.6px 13.6px -3.3px rgba(20, 18, 24, 0.03),
+    0 30px 30px -4px rgba(20, 18, 24, 0.018);
+}
+
+.shadow-lift {
+  box-shadow:
+    0 1px 1.5px -0.6px rgba(20, 18, 24, 0.1),
+    0 2.7px 4px -1.2px rgba(20, 18, 24, 0.095),
+    0 6px 9px -1.9px rgba(20, 18, 24, 0.085),
+    0 12px 18px -2.5px rgba(20, 18, 24, 0.075),
+    0 24px 36px -3.1px rgba(20, 18, 24, 0.06),
+    0 46px 66px -3.8px rgba(20, 18, 24, 0.045);
+}
+
+/* red-tinted button shadow */
+.shadow-btn {
+  box-shadow:
+    0 0.6px 1px -1.2px rgba(45, 10, 16, 0.5),
+    0 2.3px 4px -2.5px rgba(45, 10, 16, 0.4),
+    0 8px 16px -3.5px rgba(226, 42, 64, 0.28),
+    0 1.6px 1.6px -1.2px rgba(20, 18, 24, 0.18);
+}
+.shadow-btn-hover {
+  box-shadow:
+    0 0.7px 1.2px -1px rgba(45, 10, 16, 0.5),
+    0 3px 6px -2px rgba(45, 10, 16, 0.42),
+    0 14px 26px -3px rgba(226, 42, 64, 0.4),
+    0 2px 2px -1.2px rgba(20, 18, 24, 0.2);
+}
+
+/* deep shadow for the dark panels */
+.shadow-panel {
+  box-shadow:
+    0 2px 8px -2px rgba(15, 13, 17, 0.28),
+    0 14px 30px -8px rgba(15, 13, 17, 0.38),
+    0 44px 80px -22px rgba(15, 13, 17, 0.5);
+}
+
+/* ----------------------------------------------------------------------------
+   Buttons — layered shadow + hover lift (plain classes, always render)
+---------------------------------------------------------------------------- */
+.btn-primary {
+  background-color: var(--color-red);
+  color: #fff;
+  transition: box-shadow 0.3s var(--ease-out-expo),
+    transform 0.3s var(--ease-out-expo), background-color 0.2s ease;
+  box-shadow:
+    0 0.6px 1px -1.2px rgba(45, 10, 16, 0.5),
+    0 2.3px 4px -2.5px rgba(45, 10, 16, 0.4),
+    0 8px 16px -3.5px rgba(226, 42, 64, 0.28),
+    0 1.6px 1.6px -1.2px rgba(20, 18, 24, 0.18);
+}
+.btn-primary:hover {
+  background-color: var(--color-red-700);
+  transform: translateY(-1.5px);
+  box-shadow:
+    0 0.7px 1.2px -1px rgba(45, 10, 16, 0.5),
+    0 3px 6px -2px rgba(45, 10, 16, 0.42),
+    0 16px 28px -3px rgba(226, 42, 64, 0.42),
+    0 2px 2px -1.2px rgba(20, 18, 24, 0.2);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+  transition: box-shadow 0.3s var(--ease-out-expo),
+    transform 0.3s var(--ease-out-expo), border-color 0.2s ease;
+}
+.btn-secondary:hover {
+  transform: translateY(-1.5px);
+  border-color: rgba(20, 18, 24, 0.22);
+  box-shadow:
+    0 1px 1.5px -0.6px rgba(20, 18, 24, 0.1),
+    0 3px 5px -1.5px rgba(20, 18, 24, 0.09),
+    0 8px 14px -3px rgba(20, 18, 24, 0.08);
+}
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* hover lift for cards (resting shadow comes from .shadow-soft) */
+.card-lift {
+  transition: box-shadow 0.4s var(--ease-out-expo),
+    transform 0.4s var(--ease-out-expo), border-color 0.3s ease;
+  will-change: transform;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  border-color: rgba(226, 42, 64, 0.28);
+  box-shadow:
+    0 1px 1.5px -0.6px rgba(20, 18, 24, 0.1),
+    0 2.7px 4px -1.2px rgba(20, 18, 24, 0.095),
+    0 6px 9px -1.9px rgba(20, 18, 24, 0.085),
+    0 12px 18px -2.5px rgba(20, 18, 24, 0.075),
+    0 24px 36px -3.1px rgba(20, 18, 24, 0.06),
+    0 46px 66px -3.8px rgba(20, 18, 24, 0.05);
+}
+
+/* subtle pill hover */
+.pill-hover {
+  transition: transform 0.25s var(--ease-out-expo),
+    border-color 0.25s ease, background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.pill-hover:hover {
+  transform: translateY(-2px);
+}
+
+/* gentle pulsing glow for the CTA panel */
+@keyframes ctaGlow {
+  0%, 100% { opacity: 0.7; transform: translateY(0) scale(1); }
+  50% { opacity: 1; transform: translateY(-3%) scale(1.06); }
+}
+.cta-glow {
+  animation: ctaGlow 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Serif display headings — light weight + tight tracking, like the template */
+.font-display {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.03;
+}
+
+/* small uppercase eyebrow label */
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* tabular figures for stats so digits line up */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: var(--color-red);
+  color: #fff;
+}
+
+/* ----------------------------------------------------------------------------
+   DARK MODE — only flips token VALUES under html.dark.
+   No component classes change, so light mode is fully untouched.
+---------------------------------------------------------------------------- */
+html.dark {
+  color-scheme: dark;
+
+  --color-cream: #111016;    /* page base */
+  --color-cream-2: #16151c;  /* alt sections */
+  --color-paper: #1c1b23;    /* cards (elevated surface) */
+  --color-ink: #f3f1ec;      /* primary text */
+  --color-ink-soft: #a4a2ae; /* muted text */
+
+  --color-night: #0a0a0d;    /* deep feature panels (darker than page) */
+  --color-night-2: #000000;  /* darkest — stats gaps */
+
+  --color-red: #f0354a;      /* vivid red (a touch brighter for dark) */
+  --color-red-700: #ff4a5d;  /* eyebrow text + button hover (bright on dark) */
+  --color-red-bright: #ff4458;
+  --color-rose: #2c1419;     /* dark red-tinted chip background */
+
+  --color-line: #2b2a33;     /* borders */
+}
+
+html.dark body {
+  background:
+    radial-gradient(120% 60% at 50% -10%, #1c1a24 0%, rgba(0, 0, 0, 0) 55%),
+    var(--color-cream);
+}
+
+/* dark-mode shadows (light rgba shadows are invisible on dark) */
+html.dark .shadow-soft {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 8px 24px -6px rgba(0, 0, 0, 0.5);
+}
+html.dark .shadow-panel {
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.5),
+    0 30px 60px -18px rgba(0, 0, 0, 0.7);
+}
+html.dark .card-lift:hover {
+  border-color: rgba(240, 53, 74, 0.45);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 18px 40px -8px rgba(0, 0, 0, 0.6);
+}
+
+/* theme-toggle icon visibility (no JS state -> no hydration mismatch) */
+.show-in-dark {
+  display: none;
+}
+html.dark .show-in-dark {
+  display: inline-flex;
+}
+html.dark .show-in-light {
+  display: none;
 }
