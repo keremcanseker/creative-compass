@@ -6,7 +6,7 @@
 export const brand = {
   name: "Creative Compass",
   tagline: "Growth & Digital Transformation",
-  email: "hello@creativecompass.com",
+  email: "david@ccompass.io",
   year: 2026,
   location: "NYC",
 };
@@ -16,7 +16,7 @@ export const nav = {
     { label: "Services", href: "#services" },
     { label: "Why Us", href: "#why" },
     { label: "Process", href: "#process" },
-    { label: "Pricing", href: "#pricing" },
+    { label: "Engagements", href: "#pricing" },
   ],
   cta: { label: "Start a Project", href: "#contact" },
 };
@@ -26,11 +26,10 @@ export const hero = {
   titleTop: "We build, market, and",
   titleAccent: "scale businesses.",
   subtitle:
-    "One team that runs your paid media and writes the code behind it. Most agencies hand you a campaign and a login. We hand you a growth engine, with engineers on staff to build the parts off-the-shelf tools can’t.",
+    "By combining strategy, creative, technology, and growth marketing, we help companies increase revenue, improve efficiency, and create sustainable competitive advantages.",
   primary: { label: "Get a Free Growth Audit", href: "#contact" },
   secondary: { label: "See What We Do", href: "#services" },
-  rating: "Rated by the brands we’ve grown",
-  proof: "Trusted by 100+ growing brands",
+  rating: "Brands we’ve helped grow",
   stats: [
     { value: "+312%", label: "best-case ROAS lift" },
     { value: "31%", label: "blended CAC", prefix: "↓" },
@@ -40,7 +39,7 @@ export const hero = {
 };
 
 export const channels = {
-  label: "Channels & platforms we run",
+  label: "Channels & platforms we specialize in",
   items: [
     "Google Ads",
     "Meta",
@@ -66,7 +65,7 @@ export const services = {
   eyebrow: "What we do",
   title: "Everything your growth needs, under one roof.",
   subtitle:
-    "Six things most brands stitch together from five vendors. We run all of them with one team, so your strategy, creative, and the software underneath move in the same direction.",
+    "Most companies hire separate partners for strategy, creative, technology, and growth. We bring them together under one team, so every initiative moves faster, works harder, and drives measurable business growth.",
   list: [
     {
       id: "01",
@@ -167,7 +166,7 @@ export const why = {
   eyebrow: "Why Creative Compass",
   title: "A growth agency with engineers on staff.",
   subtitle:
-    "Most agencies are great at one thing and stop the moment a campaign needs custom code. We don’t. When the work calls for software, we build it instead of telling you it’s out of scope.",
+    "Most agencies execute campaigns. We build the systems behind them. When growth requires technology, automation, or custom development, our team has the expertise to build it—not hand it off to someone else.",
   cards: [
     {
       icon: "Cpu",
@@ -182,7 +181,7 @@ export const why = {
     {
       icon: "LineChart",
       title: "Growth you can audit",
-      body: "Every dollar is accounted for. Server-side attribution, live dashboards, and weekly tests mean you can check our math any day of the week.",
+      body: "No black boxes. Live dashboards, transparent reporting, and ongoing optimization mean you always know where your investment is going and what it's delivering.",
     },
   ],
 };
@@ -222,9 +221,15 @@ export const comparison = {
   columns: ["Typical agency", "Creative Compass"],
   rows: [
     { label: "In-house engineering team", values: [false, true] },
-    { label: "Server-side attribution & live dashboards", values: [false, true] },
+    {
+      label: "Server-side attribution & live dashboards",
+      values: [false, true],
+    },
     { label: "Live in 30 days, no long onboarding", values: [false, true] },
-    { label: "Strategy + marketing + creative + tech in one team", values: [false, true] },
+    {
+      label: "Strategy + marketing + creative + tech in one team",
+      values: [false, true],
+    },
     { label: "Weekly, attributable test cadence", values: [false, true] },
     { label: "Custom software, portals & AI agents", values: [false, true] },
   ],
@@ -234,16 +239,14 @@ export const industries = {
   eyebrow: "Industries",
   title: "Operators we love working with.",
   items: [
-    "Self Storage",
-    "Commercial Real Estate",
-    "Property Management",
-    "Hotels",
-    "Coworking Spaces",
+    "SaaS & Technology",
     "Ecommerce Brands",
     "Consumer Packaged Goods",
-    "SaaS Companies",
-    "Subscription Businesses",
+    "Hospitality & Hotels",
     "Franchise Organizations",
+    "Startups & Venture-Backed Companies",
+    "Entertainment & Events",
+    "Professional Services",
   ],
 };
 
@@ -264,8 +267,6 @@ export const pricing = {
   plans: [
     {
       name: "Growth Retainer",
-      price: "$10K – $50K+",
-      cadence: "/ month",
       featured: true,
       tag: "Most common",
       blurb:
@@ -279,8 +280,6 @@ export const pricing = {
     },
     {
       name: "Project Engagement",
-      price: "$25K – $250K+",
-      cadence: "fixed scope",
       featured: false,
       tag: null,
       blurb:
@@ -294,8 +293,6 @@ export const pricing = {
     },
     {
       name: "Enterprise",
-      price: "Custom",
-      cadence: "annual",
       featured: false,
       tag: null,
       blurb:
@@ -315,6 +312,6 @@ export const contact = {
   title: "Tell us where you’re stuck. We’ll show you the way out.",
   subtitle:
     "Send us your brand, your funnel, and the number that’s keeping you up. We’ll come back with a free growth audit in 48 hours.",
-  primary: { label: "Email us", href: "mailto:hello@creativecompass.com" },
+  primary: { label: "Email us", href: "mailto:david@ccompass.io" },
   secondary: { label: "Book a free growth audit", href: "#contact" },
 };

@@ -271,3 +271,16 @@ html.dark .show-in-dark {
 html.dark .show-in-light {
   display: none;
 }
+
+/* brand logo wall — light mode: no card (logos sit on the page).
+   dark mode: keep full brand colors by placing them on an intentional
+   warm-cream card (scoped to html.dark, NOT the OS preference). */
+html.dark .logo-card {
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #f4f3ee;
+  padding: 1.75rem 2.5rem;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 24px 60px -28px rgba(0, 0, 0, 0.7);
+}

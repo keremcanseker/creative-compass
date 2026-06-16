@@ -44,19 +44,8 @@ export function Pricing() {
                   )}
                 </div>
 
-                <div className="mt-5 flex items-end gap-2">
-                  <span className="font-display text-4xl">{plan.price}</span>
-                  <span
-                    className={`mb-1 text-sm ${
-                      featured ? "text-white/60" : "text-ink-soft"
-                    }`}
-                  >
-                    {plan.cadence}
-                  </span>
-                </div>
-
                 <p
-                  className={`mt-3 text-sm leading-relaxed ${
+                  className={`mt-4 text-sm leading-relaxed ${
                     featured ? "text-white/75" : "text-ink-soft"
                   }`}
                 >
@@ -87,7 +76,7 @@ export function Pricing() {
                     className="w-full"
                     withArrow
                   >
-                    Start here
+                    Get a quote
                   </Button>
                 </div>
               </div>

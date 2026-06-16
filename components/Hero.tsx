@@ -1,22 +1,13 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
+import Image from "next/image";
 import { Icon } from "./Icon";
 import { Container, Button } from "./ui";
 import { CountUp } from "./motion/CountUp";
 import { hero, channels } from "@/lib/content";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-
-function Stars() {
-  return (
-    <span className="flex items-center gap-0.5 text-red">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <Icon key={i} name="Star" className="size-4 fill-current" />
-      ))}
-    </span>
-  );
-}
 
 /* Abstract "growth dashboard" visual — stands in for the template's photos */
 function HeroVisual() {
@@ -147,20 +138,31 @@ export function Hero() {
               </Button>
             </motion.div>
 
-            <motion.div
-              variants={item}
-              className="flex items-center gap-3 pt-1"
-            >
-              <Stars />
-              <span className="text-sm text-ink-soft">
-                {hero.rating} · {hero.proof}
-              </span>
-            </motion.div>
           </motion.div>
 
           {/* visual */}
           <HeroVisual />
         </div>
+
+        {/* brand logo wall */}
+        <motion.div
+          initial={reduce ? false : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "0px 0px -60px 0px" }}
+          transition={{ duration: 0.6, ease: EASE }}
+          className="mt-14 flex flex-col items-center gap-5 text-center"
+        >
+          <span className="eyebrow text-ink-soft">{hero.rating}</span>
+          <div className="logo-card px-2">
+            <Image
+              src="/logos.png"
+              alt="Brands we’ve worked with"
+              width={2572}
+              height={478}
+              className="logo-wall h-auto w-full max-w-4xl"
+            />
+          </div>
+        </motion.div>
 
         {/* stat row */}
         <motion.div
