@@ -6,7 +6,7 @@
 // delivered to the Resend account's own signup email, so TO_EMAIL must be that
 // address. Set RESEND_API_KEY in the Vercel project environment.
 
-const TO_EMAIL = "RECIPIENT_EMAIL_HERE"; // the Resend account's signup email
+const TO_EMAIL = "keremcanseker1@gmail.com"; // the Resend account's signup email
 const FROM_EMAIL = "Creative Compass <onboarding@resend.dev>";
 
 export async function POST(req: Request) {
