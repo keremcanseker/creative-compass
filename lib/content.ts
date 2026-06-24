@@ -247,6 +247,8 @@ export const industries = {
     "Startups & Venture-Backed Companies",
     "Entertainment & Events",
     "Professional Services",
+    "Local & Service-Based Businesses",
+    "Retail & Brick-and-Mortar",
   ],
 };
 
