@@ -47,26 +47,26 @@ export function Nav() {
           <span className="text-[15px] tracking-tight">{brand.name}</span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           {nav.links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="rounded-full px-4 py-2 text-sm text-ink-soft transition-colors duration-200 hover:bg-cream-2 hover:text-ink"
+              className="whitespace-nowrap rounded-full px-4 py-2 text-sm text-ink-soft transition-colors duration-200 hover:bg-cream-2 hover:text-ink"
             >
               {l.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <ThemeToggle />
           <Button href={nav.cta.href} withArrow>
             {nav.cta.label}
           </Button>
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <ThemeToggle />
           <button
             type="button"
@@ -86,7 +86,7 @@ export function Nav() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-line bg-cream/95 backdrop-blur-xl md:hidden"
+            className="overflow-hidden border-t border-line bg-cream/95 backdrop-blur-xl lg:hidden"
           >
             <Container className="flex flex-col gap-1 py-4">
               {nav.links.map((l) => (

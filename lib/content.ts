@@ -315,3 +315,22 @@ export const contact = {
   primary: { label: "Email us", href: "mailto:david@ccompass.io" },
   secondary: { label: "Book a free growth audit", href: "#contact" },
 };
+
+export const contactForm = {
+  eyebrow: "Start a project",
+  title: "Get your free growth audit.",
+  subtitle:
+    "Tell us a little about your business and where you want to grow. We’ll reply within 48 hours with a written audit, no pitch deck required.",
+  // Monthly engagement budget — most partnerships start on a retainer.
+  budgets: [
+    { value: "<5k", label: "Under $5k / mo" },
+    { value: "5-15k", label: "$5k – $15k / mo" },
+    { value: "15-50k", label: "$15k – $50k / mo" },
+    { value: "50k+", label: "$50k+ / mo" },
+    { value: "unsure", label: "Not sure yet" },
+  ],
+  success: {
+    title: "Thanks — we’ve got it.",
+    body: "Your details are on their way to our team. Expect a reply within 48 hours.",
+  },
+};

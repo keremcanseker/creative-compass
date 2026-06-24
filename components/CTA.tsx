@@ -5,7 +5,7 @@ import { contact } from "@/lib/content";
 
 export function CTA() {
   return (
-    <section id="contact" className="px-5 py-16 sm:px-8 sm:py-24">
+    <section className="px-5 py-16 sm:px-8 sm:py-24">
       <Reveal className="mx-auto max-w-6xl">
         <div className="shadow-panel relative overflow-hidden rounded-[32px] bg-night px-6 py-16 text-center text-white ring-1 ring-white/5 sm:py-24">
             {/* soft radial glow */}
